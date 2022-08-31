@@ -6,25 +6,24 @@
 
 class UsualMatrix : public IMatrix
 {
-    private:
-        int row;
-        int col;
-        int **data;
-    public:
-        UsualMatrix();
-        UsualMatrix(const UsualMatrix &m);
-        UsualMatrix(int row, int col); //Матрица заполненная rand
-        UsualMatrix(int row, int col, int value); //Матрица заполненная value
+	private:
+		int row;
+		int col;
+		int **data;
+	public:
+		UsualMatrix();
+		UsualMatrix(const UsualMatrix &m);
+		UsualMatrix(int row, int col);				//Матрица заполненная rand
+		UsualMatrix(int row, int col, int value);	//Матрица заполненная value
 
-        void setElem(int x, int y, int value);
-        int getElem(int x, int y);
-        int getSizeRow();
-        int getSizeCol();
-        int getSize();
-        void print();
+		void setElem(int x, int y, int value);
+		int getElem(int x, int y);
+		int getSizeRow();
+		int getSizeCol();
+		int getSize();
+		void print();
 
-        UsualMatrix& operator=(const UsualMatrix &m);
-        ~UsualMatrix();
-
+		UsualMatrix& operator=(const UsualMatrix &m);
+		~UsualMatrix();
 };
 #endif
