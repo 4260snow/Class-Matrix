@@ -92,76 +92,50 @@ void SparseMatrix::setElem(int i, int j, int val)
 
 int SparseMatrix::getElem(int i, int j)
 {
-    return data->find(i, j);
+	return data->find(i, j);
 }
 
 int SparseMatrix::getSizeRow()
 {
-    return row;
+	return row;
 }
 
 int SparseMatrix::getSizeCol()
 {
-    return col;
+	return col;
 }
 
 int SparseMatrix::getSize(){
-    return count;
+	return count;
 }
 
 void SparseMatrix::print()
 {
-    data->print();
+	data->print();
 }
 
 SparseMatrix& SparseMatrix::operator=(const SparseMatrix &m)
 {
-    if (this != &m)
-    {
-        row = m.row;
-        col = m.col;
+	if (this != &m)
+	{
+		row = m.row;
+		col = m.col;
 
-        data = new LinkedList(m.data->elem.x, m.data->elem.y, m.data->find(m.data->elem.x, m.data->elem.y));
+		data = new LinkedList(m.data->elem.x, m.data->elem.y, m.data->find(m.data->elem.x, m.data->elem.y));
 
-        Node* cur = m.data->head->next;
-        count = 1;
-        while (count != m.count)
-        {
-            data->addNode(cur->elem.x, cur->elem.y, cur->elem.value);
-            cur = cur->next;
-            count++;
-        }
-    }
-    return *this;
+		Node* cur = m.data->head->next;
+		count = 1;
+		while (count != m.count)
+		{
+			data->addNode(cur->elem.x, cur->elem.y, cur->elem.value);
+			cur = cur->next;
+			count++;
+		}
+	}
+	return *this;
 }
 
 SparseMatrix::~SparseMatrix()
 {
-    delete data;
+	delete data;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
