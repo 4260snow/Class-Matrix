@@ -10,11 +10,11 @@ struct Element
 
 class Node
 {
-    public:
-    	Node *next;
-        Element elem;
+	public:
+		Node *next;
+		Element elem;
 
-    	Node(int i, int j, int value);
-    	Node();
+		Node(int i, int j, int value);
+		Node();
 };
 #endif
