@@ -6,18 +6,18 @@
 
 class LinkedList : public Node 
 {
-    public:
-	    Node *head;
-	    LinkedList();
-        
-	    LinkedList(int i, int j, int value);
+	public:
+		Node *head;
+		LinkedList();
 
-        void addNode(int i, int j, int val);
-        int change(int i, int j, int val);
-	    int find(int i, int j);
-	    int lenght();
+		LinkedList(int i, int j, int value);
 
-	    void print();
+		void addNode(int i, int j, int val);
+		int change(int i, int j, int val);
+		int find(int i, int j);
+		int lenght();
+
+		void print();
 };
 
 #endif
